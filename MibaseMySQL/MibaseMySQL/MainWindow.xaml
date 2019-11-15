@@ -6,7 +6,6 @@
         xmlns:local="clr-namespace:MySQL"
         mc:Ignorable="d"
         WindowStartupLocation="CenterScreen"
-        ResizeMode="CanMinimize"
         Title="Celulares" Height="280" Width="400">
     <Window.Resources>
         <Style TargetType="Button">
@@ -17,38 +16,37 @@
             <Setter Property="BorderThickness" Value="0,0,0,1"/>
         </Style>
     </Window.Resources>
-    <Grid>
+    <Grid RenderTransformOrigin="0.499,0.553" Margin="10,0,0,0">
         <StackPanel HorizontalAlignment="Center">
-            <Label HorizontalAlignment="Center" Content="Registro encuesta"/>
+            <Label HorizontalAlignment="Center" Content="Venta de celulares"/>
             <WrapPanel Margin="0,2">
                 <TextBlock>Marca:</TextBlock>
                 <TextBox Name="marca" Width="200" Background="#C9E7E6" Margin="20,0"/>
             </WrapPanel>
             <WrapPanel Margin="0,2">
                 <TextBlock>Modelo:</TextBlock>
-                <TextBox Name="modelo" Width="190" Background="#FFF1F1F1" Margin="28,0"/>
+                <TextBox Name="modelo" Width="190" Background="#FFFF8E" Margin="28,0"/>
             </WrapPanel>
             <WrapPanel Margin="0,2">
                 <TextBlock>Nombre del comprador:</TextBlock>
                 <TextBox Name="nom" Width="310" Background="#F1DEDD" Margin="19,0"/>
             </WrapPanel>
             <WrapPanel HorizontalAlignment="Right">
-                <Button Width="70" Content="Registrarse" Name="BtnN" Margin="0,10,30,10" Click="BtnN_Click"/>
             </WrapPanel>
         </StackPanel>
-        <DataGrid Margin="300,300,300,300" AutoGenerateColumns="True" Name="dgrid" ItemsSource="{Binding}"/>
+        <DataGrid Margin="40,144,36,46"  AutoGenerateColumns="True" Name="dgrid" ItemsSource="{Binding}" RenderTransformOrigin="0.485,0.9"/>
         <StackPanel Name="SPEdit" Margin="0,100" HorizontalAlignment="Center" Visibility="Hidden">
             <WrapPanel Margin="-143,0">
                 <TextBlock>ID:</TextBlock>
-                <TextBox Name="id" Width="20" Background="#FFF1F1F1" Margin="53,0"/>
+                <TextBox Name="id" Width="20" Background="#F18CE8" Margin="53,0"/>
             </WrapPanel>
         </StackPanel>
         <StackPanel HorizontalAlignment="Right" VerticalAlignment="Bottom" Margin="0,0,10,10">
             <WrapPanel>
-                <Button Width="70" Name="BUpdate" Content="Actualizar" Margin="5,8" Click="BUpdate_Click" Visibility="Collapsed"/>
-                <Button Width="50" Name="BCan"  Content="Cancelar" Margin="5,8" Click="BCan_Click"/>
-                <Button Width="40" Name="BEdit" Content="Editar" Margin="5,8" Click="BEdit_Click"/>
-                <Button Width="50" Name="BDel" Content="Eliminar" Margin="5,8" Click="BDel_Click"/>
+                <Button x:Name="btncrear" Margin="8,8" Content="CREAR"/>
+                <Button x:Name="btnguardar" Margin="8,8" Content="GUARDAR"/>
+                <Button x:Name="btneliminar" Margin="8,8" Content="ELIMINAR"/>
+                <Button Width="99" Content="Registrar compra" x:Name="Btnreg" Margin="0,10,60,10"/>
             </WrapPanel>
         </StackPanel>
     </Grid>
